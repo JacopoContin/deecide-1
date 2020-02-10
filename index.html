@@ -3,24 +3,78 @@
   <head>
     <meta charset="UTF-8">
     <title>DEECIDE</title>
-    <!-- <link rel="stylesheet" href="stylesheet.css" type="text/css"> !-->
+    <!--  
+    <link rel="stylesheet" href="stylesheet-2.css" type="text/css">
+    !-->
     <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
   </head>
   <body>
+        <!-- header-->
+  <header>
     <h1>DEECIDE</h1>
-    <div id="options">
-    <h2>Your Options</h2>
-    <input type="text" id="myInput" placeholder="Add option" name="option">
-    <span onclick="newElement()" class="addBtn">Add</span>
-  </div>
+    <p>Decision making tool for indecisive people.</p>
+  </header>
 
-    <ul id="myUL">
+    <!-- Main component to input -->
+    <main>
+          <!-- Question component-->
+      <div id="question">
+        <h3>Your Question</h3>
+        <p>What are you trying to figure out? <br> <span style="font-style: italic;"> (You can try: which European city should I move to?)</span></p>
+        <input type="text" id="myQuestion" placeholder="Type in your question" name="question">
+        <span onclick="newElement()" class="addQuestion">Add</span>
+      </div>
+
+          <!-- Options-->
+    <div id="options">
+      <h3>Your Options</h3>
+      <p>Type in all the options that you want to consider for your decision</p>
+      <input type="text" id="myOptions" placeholder="Add option" name="option">
+      <span onclick="newElement()" class="addOption">Add</span>
+    </div>
+
+    <!-- list of options-->
+    <ul id="myListOfOptions">
       <li>Barcelona</li>
       <li class="checked">Milan</li>
       <li>Berlin</li>
       <li>London</li>
     </ul>
-  <!--<button class="next"><i class="fas fa-forward"></i></button>!-->
+
+     <!-- Criteria -->
+     <div id="criteria">
+      <h3>Your Criteria</h3>
+      <p>Type in all the criteria related to your options <br> <span style="font-style: italic;">What will influence your decision?</span></p>
+      <input type="text" id="myCriteria" placeholder="Add criteria" name="criteria">
+      <span onclick="newElement()" class="addCriteria">Add</span>
+    </div>
+
+    <!-- list of criteria-->
+    <ul id="myListOfCriteria">
+      <li>Weather</li>
+      <li class="checked">Salary</li>
+      <li>Social life</li>
+      <li>Cost of living</li>
+    </ul>
+
+    <!-- Evaluate Options -->
+    <div id="evaluateOptions">
+      <h3>Evaluate Options</h3>
+      <p>Give a value to the options <br> <span style="font-style: italic;">How DESIRABLE is each of the following?</span></p>
+      <input type="radio" name="value" value="1"> 1    
+      <input type="radio" name="value" value="2"> 2    
+      <input type="radio" name="value" value="3"> 3    
+      <input type="radio" name="value" value="4"> 4    
+      <input type="radio" name="value" value="5"> 5    
+
+    </div>
+    </main>
+
+  <!--<button class="next"><i class="fas fa-forward"></i></button>-->
+    <!-- footer -->
+  <footer>
+    <span>Next Step</span>
+  </footer>
   </body>
   <script src="deecide.js"></script>
 </html>
